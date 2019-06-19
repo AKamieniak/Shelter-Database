@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Shelter.Core.Abstractions;
@@ -9,9 +8,9 @@ namespace Shelter.Core.Entities
 {
     public class Treatment : BaseEntity
     {
-        [JsonConverter(typeof(ICollection<StringEnumConverter>))]
-        [JsonProperty(PropertyName = "diseases")]
-        public ICollection<Disease> Diseases { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "disease")]
+        public Disease Disease { get; set; }
 
         public DateTime Date { get; set; }
         public double Cost { get; set; }

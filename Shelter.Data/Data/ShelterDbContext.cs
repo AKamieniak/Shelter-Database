@@ -64,9 +64,9 @@ namespace Shelter.Infrastructure.Data
                 v => (Race) Enum.Parse(typeof(Race), v));
 
             modelBuilder.Entity<Animal>()
-                .Property(e => e.Features).HasConversion(
+                .Property(e => e.Feature).HasConversion(
                     v => v.ToString(),
-                    v => (ICollection<Feature>) Enum.Parse(typeof(ICollection<Feature>), v));
+                    v => (Feature) Enum.Parse(typeof(Feature), v));
 
             modelBuilder.Entity<Employee>()
                 .Property(e => e.Position).HasConversion(
@@ -79,14 +79,14 @@ namespace Shelter.Infrastructure.Data
                 v => (TransactionType) Enum.Parse(typeof(TransactionType), v));
 
             modelBuilder.Entity<Treatment>()
-                .Property(e => e.Diseases).HasConversion(
+                .Property(e => e.Disease).HasConversion(
                 v => v.ToString(),
-                v => (ICollection<Disease>) Enum.Parse(typeof(ICollection<Disease>), v));
+                v => (Disease) Enum.Parse(typeof(Disease), v));
 
             modelBuilder.Entity<Volunteer>()
-                .Property(e => e.HelpKinds).HasConversion(
+                .Property(e => e.HelpKind).HasConversion(
                 v => v.ToString(),
-                v => (ICollection<HelpKind>) Enum.Parse(typeof(ICollection<HelpKind>), v));
+                v => (HelpKind) Enum.Parse(typeof(HelpKind), v));
 
             #endregion
 

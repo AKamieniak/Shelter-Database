@@ -4,5 +4,17 @@
     {
         Calm,
         Educated,
+        Furry,
+        ShortFur,
+        ShortTail,
+        LongTail,
+        Tame,
+        Agile,
+        Clever,
+        Aggressive,
+        Tiny,
+        Friendly,
+        Wild,
+        GetOnWellWithChildren,
     }
 }

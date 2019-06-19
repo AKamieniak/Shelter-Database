@@ -8,9 +8,9 @@ namespace Shelter.Core.Entities
 {
     public class Volunteer : Person
     {
-        [JsonConverter(typeof(ICollection<StringEnumConverter>))]
-        [JsonProperty(PropertyName = "helpKinds")]
-        public ICollection<HelpKind> HelpKinds { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "helpKind")]
+        public HelpKind HelpKind { get; set; }
 
         public ICollection<Sponsorship> Sponsorships { get; set; }
     }

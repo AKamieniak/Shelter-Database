@@ -10,8 +10,8 @@ using Shelter.Infrastructure.Data;
 namespace Shelter.Webapp.Migrations
 {
     [DbContext(typeof(ShelterDbContext))]
-    [Migration("20190618084556_initial")]
-    partial class initial
+    [Migration("20190622182557_AddAnimalArrivalDate")]
+    partial class AddAnimalArrivalDate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,9 +34,12 @@ namespace Shelter.Webapp.Migrations
 
                     b.Property<int?>("CustomerId");
 
+                    b.Property<DateTime>("DateOfArrival");
+
                     b.Property<string>("Description");
 
-                    b.Property<string>("Features");
+                    b.Property<string>("Feature")
+                        .IsRequired();
 
                     b.Property<string>("Name");
 
@@ -144,7 +147,8 @@ namespace Shelter.Webapp.Migrations
 
                     b.Property<DateTime>("Date");
 
-                    b.Property<string>("Diseases");
+                    b.Property<string>("Disease")
+                        .IsRequired();
 
                     b.Property<int>("EmployeeId");
 
@@ -165,7 +169,8 @@ namespace Shelter.Webapp.Migrations
 
                     b.Property<DateTime>("BirthDate");
 
-                    b.Property<string>("HelpKinds");
+                    b.Property<string>("HelpKind")
+                        .IsRequired();
 
                     b.Property<string>("Name");
 

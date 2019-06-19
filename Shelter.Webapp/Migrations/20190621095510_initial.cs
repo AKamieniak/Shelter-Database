@@ -74,7 +74,7 @@ namespace Shelter.Webapp.Migrations
                     Surname = table.Column<string>(nullable: true),
                     BirthDate = table.Column<DateTime>(nullable: false),
                     PhoneNumber = table.Column<string>(nullable: true),
-                    HelpKinds = table.Column<string>(nullable: true)
+                    HelpKind = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -89,7 +89,7 @@ namespace Shelter.Webapp.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Race = table.Column<string>(nullable: false),
-                    Features = table.Column<string>(nullable: true),
+                    Feature = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Age = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true),
@@ -139,7 +139,7 @@ namespace Shelter.Webapp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Diseases = table.Column<string>(nullable: true),
+                    Disease = table.Column<string>(nullable: false),
                     Date = table.Column<DateTime>(nullable: false),
                     Cost = table.Column<double>(nullable: false),
                     AnimalId = table.Column<int>(nullable: false),

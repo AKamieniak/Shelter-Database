@@ -3,8 +3,11 @@
     public enum HelpKind
     {
         Sponsorship,
-        Outputting,
         Cleaning,
         Feeding,
+        TakingForAWalk,
+        AnimalsPresenting,
+        AnimalsWashing,
+        PlayingWithAnimals,
     }
 }

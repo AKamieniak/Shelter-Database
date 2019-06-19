@@ -33,7 +33,7 @@ namespace Shelter.Webapp.Services
             if (sheetName == null)
                 throw new ArgumentNullException(nameof(sheetName));
 
-            var range = $"{Constants.SheetCustomers}!A:F";
+            var range = $"{sheetName}!A:G";
             var request = _service.Spreadsheets.Values.Get(Constants.SpreadsheetId, range);
 
             var response = request.Execute();

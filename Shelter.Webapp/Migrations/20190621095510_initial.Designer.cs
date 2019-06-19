@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shelter.Infrastructure.Data;
 
 namespace Shelter.Webapp.Migrations
 {
     [DbContext(typeof(ShelterDbContext))]
-    partial class ShelterDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190621095510_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,8 +33,6 @@ namespace Shelter.Webapp.Migrations
                     b.Property<int>("Age");
 
                     b.Property<int?>("CustomerId");
-
-                    b.Property<DateTime>("DateOfArrival");
 
                     b.Property<string>("Description");
 
