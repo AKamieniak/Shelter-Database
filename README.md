@@ -1,4 +1,4 @@
-# Shelter API
+# Shelter Database
 
 ## Technical details:
 
